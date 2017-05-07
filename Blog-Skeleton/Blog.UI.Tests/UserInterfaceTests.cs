@@ -28,5 +28,16 @@ namespace Blog.UI.Tests
            // IWebElement logo = wait.Until(w => w.FindElement(By.XPath("/html/body/div[1]/div/div[1]/a")));
             Assert.AreEqual("Registration | Demoqa", driver.Title);
         }
+
+        [Test]
+        public void ClickOnDraggable()
+        {
+            IWebDriver driver = BrowserHost.Instance.Application.Browser;
+            WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(60));
+            driver.Navigate().GoToUrl(@"http://demoqa.com/registration/");
+            var draggable = driver.FindElement(By.XPath("//*[@id=\"menu-item-140\"]/a"));
+            draggable.Click();
+            Assert.AreEqual("Draggable | Demoqa", driver.Title);
+        }
     }
 }

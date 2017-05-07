@@ -19,14 +19,14 @@ namespace Blog.UI.Tests
         {
             IWebDriver driver = BrowserHost.Instance.Application.Browser;
             WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(60));
-            Thread.Sleep(3000);
-            driver.Navigate().GoToUrl(@"http://localhost:60634/Article/List");
-            Thread.Sleep(3000);
-            var text = driver.Title;
+           // Thread.Sleep(3000);
+            driver.Navigate().GoToUrl(@"http://demoqa.com/registration/");
+           // Thread.Sleep(3000);
+          //  var text = driver.Title;
             
          //   IWebElement helloWorld = driver.FindElement(By.XPath("/html/body/div[2]/div/div/div[1]/article/header/h2/a"));
            // IWebElement logo = wait.Until(w => w.FindElement(By.XPath("/html/body/div[1]/div/div[1]/a")));
-            Assert.AreEqual("List - My ASP.NET Application", driver.Title);
+            Assert.AreEqual("Registration | Demoqa", driver.Title);
         }
     }
 }

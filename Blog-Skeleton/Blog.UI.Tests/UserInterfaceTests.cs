@@ -21,6 +21,7 @@ namespace Blog.UI.Tests
             WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(60));
             driver.Navigate().GoToUrl(@"http://localhost:60634/Article/List");
             Thread.Sleep(3000);
+            IWebElement helloWorld = driver.FindElement(By.XPath("/html/body/div[2]/div/div/div[1]/article/header/h2/a"));
             IWebElement logo = wait.Until(w => w.FindElement(By.XPath("/html/body/div[1]/div/div[1]/a")));
             Assert.AreEqual("SOFTUNI BLOG", logo.Text);
         }

@@ -19,8 +19,9 @@ namespace Blog.UI.Tests
         {
             IWebDriver driver = BrowserHost.Instance.Application.Browser;
             WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(60));
+            Thread.Sleep(3000);
             driver.Navigate().GoToUrl(@"http://localhost:60634/Article/List");
-            //Thread.Sleep(3000);
+            Thread.Sleep(3000);
             var text = driver.Title;
             
          //   IWebElement helloWorld = driver.FindElement(By.XPath("/html/body/div[2]/div/div/div[1]/article/header/h2/a"));

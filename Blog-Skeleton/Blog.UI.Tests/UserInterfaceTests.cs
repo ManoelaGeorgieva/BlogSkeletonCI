@@ -6,6 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace Blog.UI.Tests
@@ -19,7 +20,7 @@ namespace Blog.UI.Tests
             IWebDriver driver = BrowserHost.Instance.Application.Browser;
             WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(60));
             driver.Navigate().GoToUrl(@"http://localhost:60634/Article/List");
-
+            Thread.Sleep(3000);
             IWebElement logo = wait.Until(w => w.FindElement(By.XPath("/html/body/div[1]/div/div[1]/a")));
             Assert.AreEqual("SOFTUNI BLOG", logo.Text);
         }

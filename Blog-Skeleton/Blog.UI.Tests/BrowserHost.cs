@@ -15,7 +15,7 @@ namespace Blog.UI.Tests
 
         static BrowserHost()
         {
-            Instance.Run("Blog", 60639);
+            Instance.Run("Blog", 60634);
         }
     }
 }

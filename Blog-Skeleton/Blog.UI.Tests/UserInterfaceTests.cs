@@ -19,7 +19,7 @@ namespace Blog.UI.Tests
         {
             IWebDriver driver = BrowserHost.Instance.Application.Browser;
             WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(60));
-            driver.Navigate().GoToUrl(@"http://localhost:60639/Article/List");
+            
             Thread.Sleep(10000);
             Assert.AreEqual("List - My ASP.NET Application", driver.Title);
         }

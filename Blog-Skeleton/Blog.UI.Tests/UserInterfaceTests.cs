@@ -23,26 +23,15 @@ namespace Blog.UI.Tests
             Thread.Sleep(10000);
             Assert.AreEqual("List - My ASP.NET Application", driver.Title);
         }
-
-        //[Test]
-        //public void Register()
-        //{
-        //    IWebDriver driver = BrowserHost.Instance.Application.Browser;
-        //    WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(60));
-        //    driver.FindElement(By.Id("registerLink")).Click();
-        //    Assert.AreEqual("Register", driver.FindElement(By.XPath("/html/body/div[2]/div/div/h2")).Text);
-        //}
-
-
-        //[Test]
-        //public void ClickOnDraggable()
-        //{
-        //    IWebDriver driver = BrowserHost.Instance.Application.Browser;
-        //    WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(60));
-        //    driver.Navigate().GoToUrl(@"http://demoqa.com/registration/");
-        //    var draggable = driver.FindElement(By.XPath("//*[@id=\"menu-item-140\"]/a"));
-        //    draggable.Click();
-        //    Assert.AreEqual("Draggable | Demoqa", driver.Title);
-        //}
+        [Test]
+        public void ClickOnDraggable()
+        {
+            IWebDriver driver = BrowserHost.Instance.Application.Browser;
+            WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(60));
+            driver.Navigate().GoToUrl(@"http://demoqa.com/registration/");
+            var draggable = driver.FindElement(By.XPath("//*[@id=\"menu-item-140\"]/a"));
+            draggable.Click();
+            Assert.AreEqual("Draggable | Demoqa", driver.Title);
+        }
     }
 }

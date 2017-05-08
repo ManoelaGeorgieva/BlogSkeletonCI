@@ -24,15 +24,15 @@ namespace Blog.UI.Tests
             Assert.AreEqual("List - My ASP.NET Application", driver.Title);
 
         }
-        [Test]
-        [Property("Manoela", 1)]
-        public void CheckAbleToLogIn()
-        {
-            IWebDriver driver = BrowserHost.Instance.Application.Browser;
-            driver.FindElement(By.Id("loginLink")).Click();
-            var LogInLabel = driver.FindElement(By.XPath("/html/body/div[2]/div/div/h2"));
-            Assert.AreEqual("Log in", LogInLabel.Text);
-        }
+        //[Test]
+        //[Property("Manoela", 1)]
+        //public void CheckAbleToLogIn()
+        //{
+        //    IWebDriver driver = BrowserHost.Instance.Application.Browser;
+        //    driver.FindElement(By.Id("loginLink")).Click();
+        //    var LogInLabel = driver.FindElement(By.XPath("/html/body/div[2]/div/div/h2"));
+        //    Assert.AreEqual("Log in", LogInLabel.Text);
+        //}
 
         [Test]
         public void ClickOnDraggable()

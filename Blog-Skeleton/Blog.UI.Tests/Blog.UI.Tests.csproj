@@ -92,7 +92,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BrowserHost.cs" />
-    <Compile Include="RegistrationTesting\RegisterMap.cs" />
     <Compile Include="UserInterfaceTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
